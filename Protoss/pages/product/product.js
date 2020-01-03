@@ -75,6 +75,7 @@ Page({
     _flyToCartEffect:function(events){
         //获得当前点击的位置，距离可视区域左上角
         var touches=events.touches[0];
+        console.log(touches);
         var diff={
                 x:'25px',
                 y:25-touches.clientY+'px'
