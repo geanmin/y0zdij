@@ -103,7 +103,8 @@ Page({
     },
 
     /*跳转到购物车*/
-    onCartTap:function(){
+    onCartTap:function(events){
+      console.log(events);
         wx.switchTab({
             url: '/pages/cart/cart'
         });
