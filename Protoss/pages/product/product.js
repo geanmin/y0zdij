@@ -61,9 +61,12 @@ Page({
 
     /*将商品数据添加到内存中*/
     addToCart:function(){
-        var tempObj={},keys=['id','name','main_img_url','price'];
+        var tempObj={},keys=['id','name','img','price'];
+        
         for(var key in this.data.product){
+         
             if(keys.indexOf(key)>=0){
+              console.log(keys.indexOf(key));
                 tempObj[key]=this.data.product[key];
             }
         }
@@ -75,7 +78,6 @@ Page({
     _flyToCartEffect:function(events){
         //获得当前点击的位置，距离可视区域左上角
         var touches=events.touches[0];
-        console.log(touches);
         var diff={
                 x:'25px',
                 y:25-touches.clientY+'px'
@@ -104,7 +106,6 @@ Page({
 
     /*跳转到购物车*/
     onCartTap:function(events){
-      console.log(events);
         wx.switchTab({
             url: '/pages/cart/cart'
         });

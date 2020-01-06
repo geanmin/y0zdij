@@ -14,7 +14,7 @@ class Home extends Base{
     getBannerData(callback){
         var that=this;
         var param={
-            url: 'banner/1',
+            url: '/api/v1/banner/1',
 
             sCallback:function(data){
                 data=data.items;

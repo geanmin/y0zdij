@@ -1,13 +1,13 @@
-// 引用使用es6的module引入和定义
-// 全局变量以g_开头
-// 私有函数以_开头
+// // 引用使用es6的module引入和定义
+// // 全局变量以g_开头
+// // 私有函数以_开头
 
 import { Config } from 'config.js';
 
 class Token {
     constructor() {
-        this.verifyUrl = Config.restUrl + 'token/verify';
-        this.tokenUrl = Config.restUrl + 'token/user';
+        this.verifyUrl = Config.restUrl + '/api/v1/token/verify';
+        this.tokenUrl = Config.restUrl + '/api/v1/token/user';
     }
 
     verify() {
