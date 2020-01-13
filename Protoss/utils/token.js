@@ -7,7 +7,7 @@ import { Config } from 'config.js';
 class Token {
     constructor() {
         this.verifyUrl = Config.restUrl + '/api/v1/token/verify';
-        this.tokenUrl = Config.restUrl + '/api/v1/token/user';
+        //this.tokenUrl = Config.restUrl + '/api/v1/token/user';
     }
 
     verify() {

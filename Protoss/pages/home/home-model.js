@@ -14,10 +14,9 @@ class Home extends Base{
     getBannerData(callback){
         var that=this;
         var param={
-            url: '/api/v1/banner/1',
-
+            url: '/api/v1/indexBanner',
             sCallback:function(data){
-                data=data.items;
+                data=data.data;
                 callback && callback(data);
             }
         };
@@ -26,8 +25,9 @@ class Home extends Base{
     /*首页主题*/
     getThemeData(callback){
         var param={
-            url: 'theme?ids=1,2,3',
+          url: '/api/v1/indexBanner',
             sCallback:function(data){
+              data = data.data;
                 callback && callback(data);
             }
         };
@@ -37,8 +37,11 @@ class Home extends Base{
     /*首页部分商品*/
     getProductorData(callback){
         var param={
-            url: 'product/recent',
+          url: '/api/v1/indexHomeProduct',
             sCallback:function(data){
+        
+              data = data.data;
+              
                 callback && callback(data);
             }
         };
