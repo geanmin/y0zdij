@@ -40,6 +40,7 @@ Page({
     /*跳转到商品详情*/
     onProductsItemTap: function (event) {
         var id = home.getDataSet(event, 'id');
+        //console.log(id);
         wx.navigateTo({
             url: '../product/product?id=' + id
         })
