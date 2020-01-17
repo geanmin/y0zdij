@@ -62,16 +62,11 @@ Page({
     /*将商品数据添加到内存中*/
     addToCart:function(){
         var tempObj={},keys=['id','name','img','price'];
-      console.log(this.data.product);
-        for(var key in this.data.product){
-          // console.log(key);
+        for(var key in this.data.product){  
             if(keys.indexOf(key)>=0){
-              // console.log(keys.indexOf(key));
-              // console.log(this.data.product[key]);
                 tempObj[key]=this.data.product[key];
             }
         }
-        // console.log(tempObj); 
         cart.add(tempObj,this.data.productCounts);
     },
 
